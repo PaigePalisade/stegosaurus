@@ -23,7 +23,7 @@ proc hide*(imageName: string, filename: string, output: string = "output.png"): 
     echo "Unable to open file"
     return false
 
-  if sizeof(file) > maxFileSize:
+  if file.getFileSize() > maxFileSize:
     echo "File too big to hide in image"
     return false
 
